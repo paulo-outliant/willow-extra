@@ -1,4 +1,7 @@
 <style>
+     @media(max-width: 768px) {
+          
+     }
      .popup {
         position: absolute;
         background-color: #fff;
@@ -256,7 +259,8 @@
 
 
 <script>
-    window.addEventListener('load', function() {
+window.addEventListener('load', function() {
+    if (window.innerWidth > 768) {
         const paths = document.querySelectorAll('#usa-states-list path');
         const popup = document.getElementById('usa-states-popup');
 
@@ -280,7 +284,7 @@
                 popup.style.display = 'none';
             });
         });
-    });
-
+    }
+});
 </script>
 
